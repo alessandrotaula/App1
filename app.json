@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "owner": "appacella",
+    "name": "Gratitude Journal",
+    "slug": "gratitude-journal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F9F7FF"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.appacella.gratitudejournal",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app uses the microphone to record your gratitude entries via speech.",
+        "NSSpeechRecognitionUsageDescription": "This app uses speech recognition to convert your spoken gratitude entries to text."
+      }
+    },
+    "android": {
+      "package": "com.appacella.gratitudejournal",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/appacella-logo-white.png",
+        "backgroundColor": "#F9F7FF"
+      },
+      "permissions": ["RECORD_AUDIO"]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://project-1ac0320b.dev.kiki.dev"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#F9F7FF"
+        }
+      ],
+      "expo-notifications",
+      "expo-speech"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
